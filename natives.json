@@ -56741,7 +56741,7 @@
 			"return_type": "BOOL",
 			"build": "2699"
 		},
-		"0x8F5D1AD832AEB06C": {
+		"0xA150A4F065806B1F": {
 			"name": "NETWORK_CAN_COMMUNICATE_WITH_GAMER",
 			"jhash": "0xD05EB7F6",
 			"comment": "",
@@ -56752,12 +56752,9 @@
 				}
 			],
 			"return_type": "BOOL",
-			"build": "323",
-			"old_names": [
-				"_NETWORK_CAN_COMMUNICATE_WITH_GAMER_2"
-			]
+			"build": "323"
 		},
-		"0xA150A4F065806B1F": {
+		"0xEEC02C7C0666D990": {
 			"name": "NETWORK_CAN_TEXT_CHAT_WITH_GAMER",
 			"jhash": "",
 			"comment": "",
@@ -56770,7 +56767,7 @@
 			"return_type": "BOOL",
 			"build": "944",
 			"old_names": [
-				"NETWORK_CAN_COMMUNICATE_WITH_GAMER"
+				"_NETWORK_CAN_COMMUNICATE_WITH_GAMER_2"
 			]
 		},
 		"0xCE60DE011B6C7978": {
