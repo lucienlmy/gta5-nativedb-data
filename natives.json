@@ -436,7 +436,7 @@
 			]
 		}
 	},
-	"APP": {
+	"APPS": {
 		"0x846AA8E7D55EE5B6": {
 			"name": "APP_DATA_VALID",
 			"jhash": "0x72BDE002",
@@ -5251,7 +5251,7 @@
 			"build": "323"
 		}
 	},
-	"CAM": {
+	"CAMERA": {
 		"0x07E5B515DB0636FC": {
 			"name": "RENDER_SCRIPT_CAMS",
 			"jhash": "0x74337969",
@@ -26324,6 +26324,366 @@
 			]
 		}
 	},
+	"GTA": {
+		"0xA4E8E696C532FBC7": {
+			"name": "CREATE_MOBILE_PHONE",
+			"jhash": "0x5BBC5E23",
+			"comment": "Creates a mobile phone of the specified type.\n\nPossible phone types:\n\n0 - Default phone / Michael's phone\n1 - Trevor's phone\n2 - Franklin's phone\n3 - Unused police phone\n4 - Prologue phone\n\nHigher values may crash your game.",
+			"params": [
+				{
+					"type": "int",
+					"name": "phoneType"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x3BC861DF703E5097": {
+			"name": "DESTROY_MOBILE_PHONE",
+			"jhash": "0x1A65037B",
+			"comment": "Destroys the currently active mobile phone.",
+			"params": [],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xCBDD322A73D6D932": {
+			"name": "SET_MOBILE_PHONE_SCALE",
+			"jhash": "0x09BCF1BE",
+			"comment": "The minimum/default is 500.0f. If you plan to make it bigger set it's position as well. Also this seems to need to be called in a loop as when you close the phone the scale is reset. If not in a loop you'd need to call it everytime before you re-open the phone.",
+			"params": [
+				{
+					"type": "float",
+					"name": "scale"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xBB779C0CA917E865": {
+			"name": "SET_MOBILE_PHONE_ROTATION",
+			"jhash": "0x209C28CF",
+			"comment": "Last parameter is unknown and always zero.",
+			"params": [
+				{
+					"type": "float",
+					"name": "rotX"
+				},
+				{
+					"type": "float",
+					"name": "rotY"
+				},
+				{
+					"type": "float",
+					"name": "rotZ"
+				},
+				{
+					"type": "Any",
+					"name": "p3"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x1CEFB61F193070AE": {
+			"name": "GET_MOBILE_PHONE_ROTATION",
+			"jhash": "0x17A29F23",
+			"comment": "",
+			"params": [
+				{
+					"type": "Vector3*",
+					"name": "rotation"
+				},
+				{
+					"type": "Vehicle",
+					"name": "p1"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x693A5C6D6734085B": {
+			"name": "SET_MOBILE_PHONE_POSITION",
+			"jhash": "0x841800B3",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "posX"
+				},
+				{
+					"type": "float",
+					"name": "posY"
+				},
+				{
+					"type": "float",
+					"name": "posZ"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x584FDFDA48805B86": {
+			"name": "GET_MOBILE_PHONE_POSITION",
+			"jhash": "0xB2E1E1A0",
+			"comment": "",
+			"params": [
+				{
+					"type": "Vector3*",
+					"name": "position"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xF511F759238A5122": {
+			"name": "SCRIPT_IS_MOVING_MOBILE_PHONE_OFFSCREEN",
+			"jhash": "0x29828690",
+			"comment": "If bool Toggle = true so the mobile is hide to screen.\nIf bool Toggle = false so the mobile is show to screen.",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xC4E2813898C97A4B": {
+			"name": "CAN_PHONE_BE_SEEN_ON_SCREEN",
+			"jhash": "0x5F978584",
+			"comment": "This one is weird and seems to return a TRUE state regardless of whether the phone is visible on screen or tucked away.\n\n\nI can confirm the above. This function is hard-coded to always return 1.",
+			"params": [],
+			"return_type": "BOOL",
+			"build": "323"
+		},
+		"0x375A706A5C2FD084": {
+			"name": "SET_MOBILE_PHONE_DOF_STATE",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "372",
+			"old_names": [
+				"_SET_MOBILE_PHONE_UNK"
+			]
+		},
+		"0x95C9E72F3D7DEC9B": {
+			"name": "CELL_SET_INPUT",
+			"jhash": "",
+			"comment": "For move the finger of player, the value of int goes 1 at 5.",
+			"params": [
+				{
+					"type": "int",
+					"name": "direction"
+				}
+			],
+			"return_type": "void",
+			"build": "323",
+			"old_names": [
+				"_MOVE_FINGER",
+				"_CELL_CAM_MOVE_FINGER"
+			]
+		},
+		"0x44E44169EF70138E": {
+			"name": "CELL_HORIZONTAL_MODE_TOGGLE",
+			"jhash": "",
+			"comment": "if the bool \"Toggle\" is \"true\" so the phone is lean.\nif the bool \"Toggle\" is \"false\" so the phone is not lean.",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "323",
+			"old_names": [
+				"_SET_PHONE_LEAN",
+				"_CELL_CAM_SET_LEAN"
+			]
+		},
+		"0xFDE8F069C542D126": {
+			"name": "CELL_CAM_ACTIVATE",
+			"jhash": "0x234C1AE9",
+			"comment": "",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "p0"
+				},
+				{
+					"type": "BOOL",
+					"name": "p1"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x015C49A93E3E086E": {
+			"name": "CELL_CAM_ACTIVATE_SELFIE_MODE",
+			"jhash": "0x4479B304",
+			"comment": "",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "323",
+			"old_names": [
+				"_DISABLE_PHONE_THIS_FRAME",
+				"_CELL_CAM_DISABLE_THIS_FRAME"
+			]
+		},
+		"0xA2CCBE62CD4C91A4": {
+			"name": "CELL_CAM_ACTIVATE_SHALLOW_DOF_MODE",
+			"jhash": "0xC273BB4D",
+			"comment": "",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x1B0B4AEED5B9B41C": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_SIDE_OFFSET_SCALING",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "p0"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x53F4892D18EC90A4": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_HORZ_PAN_OFFSET",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "horizontalPan"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x3117D84EFA60F77B": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_VERT_PAN_OFFSET",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "vertPan"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x15E69E2802C24B8D": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_ROLL_OFFSET",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "roll"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xAC2890471901861C": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_DISTANCE_SCALING",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "distanceScaling"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xD6ADE981781FCA09": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_HEAD_YAW_OFFSET",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "yaw"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0xF1E22DC13F5EEBAD": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_HEAD_ROLL_OFFSET",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "roll"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x466DA42C89865553": {
+			"name": "CELL_CAM_SET_SELFIE_MODE_HEAD_PITCH_OFFSET",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "pitch"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		},
+		"0x439E9BC95B7E7FBE": {
+			"name": "CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK",
+			"jhash": "0xBEA88097",
+			"comment": "",
+			"params": [
+				{
+					"type": "Entity",
+					"name": "entity"
+				}
+			],
+			"return_type": "BOOL",
+			"build": "323"
+		},
+		"0xB4A53E05F68B6FA1": {
+			"name": "GET_MOBILE_PHONE_RENDER_ID",
+			"jhash": "0x88E4FECE",
+			"comment": "",
+			"params": [
+				{
+					"type": "int*",
+					"name": "renderId"
+				}
+			],
+			"return_type": "void",
+			"build": "323"
+		}
+	},
 	"HUD": {
 		"0xABA17D7CE615ADBF": {
 			"name": "BEGIN_TEXT_COMMAND_BUSYSPINNER_ON",
@@ -35355,7 +35715,7 @@
 			"build": "791"
 		}
 	},
-	"ITEMSET": {
+	"ITEMSETS": {
 		"0x35AD299F50D91B24": {
 			"name": "CREATE_ITEMSET",
 			"jhash": "0x0A113B2C",
@@ -41783,366 +42143,6 @@
 			],
 			"return_type": "int",
 			"build": "3095"
-		}
-	},
-	"MOBILE": {
-		"0xA4E8E696C532FBC7": {
-			"name": "CREATE_MOBILE_PHONE",
-			"jhash": "0x5BBC5E23",
-			"comment": "Creates a mobile phone of the specified type.\n\nPossible phone types:\n\n0 - Default phone / Michael's phone\n1 - Trevor's phone\n2 - Franklin's phone\n3 - Unused police phone\n4 - Prologue phone\n\nHigher values may crash your game.",
-			"params": [
-				{
-					"type": "int",
-					"name": "phoneType"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x3BC861DF703E5097": {
-			"name": "DESTROY_MOBILE_PHONE",
-			"jhash": "0x1A65037B",
-			"comment": "Destroys the currently active mobile phone.",
-			"params": [],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xCBDD322A73D6D932": {
-			"name": "SET_MOBILE_PHONE_SCALE",
-			"jhash": "0x09BCF1BE",
-			"comment": "The minimum/default is 500.0f. If you plan to make it bigger set it's position as well. Also this seems to need to be called in a loop as when you close the phone the scale is reset. If not in a loop you'd need to call it everytime before you re-open the phone.",
-			"params": [
-				{
-					"type": "float",
-					"name": "scale"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xBB779C0CA917E865": {
-			"name": "SET_MOBILE_PHONE_ROTATION",
-			"jhash": "0x209C28CF",
-			"comment": "Last parameter is unknown and always zero.",
-			"params": [
-				{
-					"type": "float",
-					"name": "rotX"
-				},
-				{
-					"type": "float",
-					"name": "rotY"
-				},
-				{
-					"type": "float",
-					"name": "rotZ"
-				},
-				{
-					"type": "Any",
-					"name": "p3"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x1CEFB61F193070AE": {
-			"name": "GET_MOBILE_PHONE_ROTATION",
-			"jhash": "0x17A29F23",
-			"comment": "",
-			"params": [
-				{
-					"type": "Vector3*",
-					"name": "rotation"
-				},
-				{
-					"type": "Vehicle",
-					"name": "p1"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x693A5C6D6734085B": {
-			"name": "SET_MOBILE_PHONE_POSITION",
-			"jhash": "0x841800B3",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "posX"
-				},
-				{
-					"type": "float",
-					"name": "posY"
-				},
-				{
-					"type": "float",
-					"name": "posZ"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x584FDFDA48805B86": {
-			"name": "GET_MOBILE_PHONE_POSITION",
-			"jhash": "0xB2E1E1A0",
-			"comment": "",
-			"params": [
-				{
-					"type": "Vector3*",
-					"name": "position"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xF511F759238A5122": {
-			"name": "SCRIPT_IS_MOVING_MOBILE_PHONE_OFFSCREEN",
-			"jhash": "0x29828690",
-			"comment": "If bool Toggle = true so the mobile is hide to screen.\nIf bool Toggle = false so the mobile is show to screen.",
-			"params": [
-				{
-					"type": "BOOL",
-					"name": "toggle"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xC4E2813898C97A4B": {
-			"name": "CAN_PHONE_BE_SEEN_ON_SCREEN",
-			"jhash": "0x5F978584",
-			"comment": "This one is weird and seems to return a TRUE state regardless of whether the phone is visible on screen or tucked away.\n\n\nI can confirm the above. This function is hard-coded to always return 1.",
-			"params": [],
-			"return_type": "BOOL",
-			"build": "323"
-		},
-		"0x375A706A5C2FD084": {
-			"name": "SET_MOBILE_PHONE_DOF_STATE",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "BOOL",
-					"name": "toggle"
-				}
-			],
-			"return_type": "void",
-			"build": "372",
-			"old_names": [
-				"_SET_MOBILE_PHONE_UNK"
-			]
-		},
-		"0x95C9E72F3D7DEC9B": {
-			"name": "CELL_SET_INPUT",
-			"jhash": "",
-			"comment": "For move the finger of player, the value of int goes 1 at 5.",
-			"params": [
-				{
-					"type": "int",
-					"name": "direction"
-				}
-			],
-			"return_type": "void",
-			"build": "323",
-			"old_names": [
-				"_MOVE_FINGER",
-				"_CELL_CAM_MOVE_FINGER"
-			]
-		},
-		"0x44E44169EF70138E": {
-			"name": "CELL_HORIZONTAL_MODE_TOGGLE",
-			"jhash": "",
-			"comment": "if the bool \"Toggle\" is \"true\" so the phone is lean.\nif the bool \"Toggle\" is \"false\" so the phone is not lean.",
-			"params": [
-				{
-					"type": "BOOL",
-					"name": "toggle"
-				}
-			],
-			"return_type": "void",
-			"build": "323",
-			"old_names": [
-				"_SET_PHONE_LEAN",
-				"_CELL_CAM_SET_LEAN"
-			]
-		},
-		"0xFDE8F069C542D126": {
-			"name": "CELL_CAM_ACTIVATE",
-			"jhash": "0x234C1AE9",
-			"comment": "",
-			"params": [
-				{
-					"type": "BOOL",
-					"name": "p0"
-				},
-				{
-					"type": "BOOL",
-					"name": "p1"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x015C49A93E3E086E": {
-			"name": "CELL_CAM_ACTIVATE_SELFIE_MODE",
-			"jhash": "0x4479B304",
-			"comment": "",
-			"params": [
-				{
-					"type": "BOOL",
-					"name": "toggle"
-				}
-			],
-			"return_type": "void",
-			"build": "323",
-			"old_names": [
-				"_DISABLE_PHONE_THIS_FRAME",
-				"_CELL_CAM_DISABLE_THIS_FRAME"
-			]
-		},
-		"0xA2CCBE62CD4C91A4": {
-			"name": "CELL_CAM_ACTIVATE_SHALLOW_DOF_MODE",
-			"jhash": "0xC273BB4D",
-			"comment": "",
-			"params": [
-				{
-					"type": "BOOL",
-					"name": "toggle"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x1B0B4AEED5B9B41C": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_SIDE_OFFSET_SCALING",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "p0"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x53F4892D18EC90A4": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_HORZ_PAN_OFFSET",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "horizontalPan"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x3117D84EFA60F77B": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_VERT_PAN_OFFSET",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "vertPan"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x15E69E2802C24B8D": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_ROLL_OFFSET",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "roll"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xAC2890471901861C": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_DISTANCE_SCALING",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "distanceScaling"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xD6ADE981781FCA09": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_HEAD_YAW_OFFSET",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "yaw"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0xF1E22DC13F5EEBAD": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_HEAD_ROLL_OFFSET",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "roll"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x466DA42C89865553": {
-			"name": "CELL_CAM_SET_SELFIE_MODE_HEAD_PITCH_OFFSET",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "float",
-					"name": "pitch"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
-		},
-		"0x439E9BC95B7E7FBE": {
-			"name": "CELL_CAM_IS_CHAR_VISIBLE_NO_FACE_CHECK",
-			"jhash": "0xBEA88097",
-			"comment": "",
-			"params": [
-				{
-					"type": "Entity",
-					"name": "entity"
-				}
-			],
-			"return_type": "BOOL",
-			"build": "323"
-		},
-		"0xB4A53E05F68B6FA1": {
-			"name": "GET_MOBILE_PHONE_RENDER_ID",
-			"jhash": "0x88E4FECE",
-			"comment": "",
-			"params": [
-				{
-					"type": "int*",
-					"name": "renderId"
-				}
-			],
-			"return_type": "void",
-			"build": "323"
 		}
 	},
 	"MONEY": {
@@ -68159,7 +68159,7 @@
 			"build": "3570"
 		}
 	},
-	"PATHFIND": {
+	"PATH": {
 		"0xBF1A602B5BA52FEE": {
 			"name": "SET_ROADS_IN_AREA",
 			"jhash": "0xEBC7B918",
