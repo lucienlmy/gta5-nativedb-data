@@ -1610,7 +1610,7 @@
 		"0x2DE3F0A134FFBC0D": {
 			"name": "GET_NETWORK_ID_FROM_SOUND_ID",
 			"jhash": "0x2576F610",
-			"comment": "Could this be used alongside either, \nSET_NETWORK_ID_EXISTS_ON_ALL_MACHINES or _SET_NETWORK_ID_SYNC_TO_PLAYER to make it so other players can hear the sound while online? It'd be a bit troll-fun to be able to play the Zancudo UFO creepy sounds globally.",
+			"comment": "",
 			"params": [
 				{
 					"type": "int",
@@ -12546,7 +12546,7 @@
 		"0x1DD55701034110E5": {
 			"name": "GET_ENTITY_HEIGHT_ABOVE_GROUND",
 			"jhash": "0x57F56A4D",
-			"comment": "Return height (z-dimension) above ground. \nExample: The pilot in a titan plane is 1.844176 above ground.\n\nHow can i convert it to meters?\nEverything seems to be in meters, probably this too.",
+			"comment": "Return height (z-dimension) above ground.\nExample: The pilot in a titan plane is 1.844176 above ground.",
 			"params": [
 				{
 					"type": "Entity",
@@ -13591,7 +13591,7 @@
 		"0xC5F68BE9613E2D18": {
 			"name": "APPLY_FORCE_TO_ENTITY",
 			"jhash": "0xC1C0855A",
-			"comment": "Documented here:\ngtaforums.com/topic/885669-precisely-define-object-physics/\ngtaforums.com/topic/887362-apply-forces-and-momentums-to-entityobject/\n\nforceFlags:\nFirst bit (lowest): Strong force flag, factor 100\nSecond bit: Unkown flag\nThird bit: Momentum flag=1 (vector (x,y,z) is a momentum, more research needed)\nIf higher bits are unequal 0 the function doesn't applay any forces at all.\n(As integer possible values are 0-7)\n\n0: weak force\n1: strong force\n2: same as 0 (2nd bit?)\n3: same as 1\n4: weak momentum\n5: strong momentum\n6: same as 4\n7: same as 5\n\nisLocal: vector defined in local (body-fixed) coordinate frame\nisMassRel: if true the force gets multiplied with the objects mass (this is why it was known as highForce) and different objects will have the same acceleration.\n\np8 !!! Whenever I set this !=0, my script stopped.",
+			"comment": "Documented here:\ngtaforums.com/topic/885669-precisely-define-object-physics/\ngtaforums.com/topic/887362-apply-forces-and-momentums-to-entityobject/\n\nforceFlags:\nFirst bit (lowest): Strong force flag, factor 100\nSecond bit: Unkown flag\nThird bit: Momentum flag=1 (vector (x,y,z) is a momentum, more research needed)\nIf higher bits are unequal 0 the function doesn't applay any forces at all.\n(As integer possible values are 0-7)\n\n0: weak force\n1: strong force\n2: same as 0 (2nd bit?)\n3: same as 1\n4: weak momentum\n5: strong momentum\n6: same as 4\n7: same as 5\n\nisLocal: vector defined in local (body-fixed) coordinate frame\nisMassRel: if true the force gets multiplied with the objects mass (this is why it was known as highForce) and different objects will have the same acceleration.",
 			"params": [
 				{
 					"type": "Entity",
@@ -14413,7 +14413,7 @@
 		"0xAD738C3085FE7E11": {
 			"name": "SET_ENTITY_AS_MISSION_ENTITY",
 			"jhash": "0x5D1F9E0F",
-			"comment": "Makes the specified entity (ped, vehicle or object) persistent. Persistent entities will not automatically be removed by the engine.\n\np1 has no effect when either its on or off \nmaybe a quick disassembly will tell us what it does\n\np2 has no effect when either its on or off \nmaybe a quick disassembly will tell us what it does",
+			"comment": "Makes the specified entity (ped, vehicle or object) persistent. Persistent entities will not automatically be removed by the engine.",
 			"params": [
 				{
 					"type": "Entity",
@@ -14421,11 +14421,11 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p1"
+					"name": "bScriptHostObject"
 				},
 				{
 					"type": "BOOL",
-					"name": "p2"
+					"name": "bGrabFromOtherScript"
 				}
 			],
 			"return_type": "void",
@@ -20415,7 +20415,7 @@
 		"0xAFF33B1178172223": {
 			"name": "SET_BINK_MOVIE_VOLUME",
 			"jhash": "",
-			"comment": "binkMovie: Is return value from _SET_BINK_MOVIE. Has something to do with bink volume? (audRequestedSettings::SetVolumeCurveScale)",
+			"comment": "binkMovie: Is return value from SET_BINK_MOVIE.",
 			"params": [
 				{
 					"type": "int",
@@ -24840,11 +24840,11 @@
 		"0x2FCB133CA50A49EB": {
 			"name": "IS_ACTIVE_SCALEFORM_MOVIE_DELETING",
 			"jhash": "",
-			"comment": "val is 1-20 (0 will return false)",
+			"comment": "",
 			"params": [
 				{
 					"type": "int",
-					"name": "val"
+					"name": "scaleformHandle"
 				}
 			],
 			"return_type": "BOOL",
@@ -24853,11 +24853,11 @@
 		"0x86255B1FC929E33E": {
 			"name": "IS_SCALEFORM_MOVIE_DELETING",
 			"jhash": "",
-			"comment": "val is 1-20. Return is related to INSTRUCTIONAL_BUTTONS, COLOUR_SWITCHER_02, etc?",
+			"comment": "",
 			"params": [
 				{
 					"type": "int",
-					"name": "val"
+					"name": "scaleformHandle"
 				}
 			],
 			"return_type": "BOOL",
@@ -29403,7 +29403,7 @@
 		"0xBE6B23FFA53FB442": {
 			"name": "SET_TEXT_COLOUR",
 			"jhash": "0xE54DD2C8",
-			"comment": "colors you input not same as you think?\nA: for some reason its R B G A",
+			"comment": "",
 			"params": [
 				{
 					"type": "int",
@@ -31778,7 +31778,7 @@
 		"0x960C9FF8F616E41C": {
 			"name": "DISPLAY_HELP_TEXT_THIS_FRAME",
 			"jhash": "0x18E3360A",
-			"comment": "The messages are localized strings.\nExamples:\n\"No_bus_money\"\n\"Enter_bus\"\n\"Tour_help\"\n\"LETTERS_HELP2\"\n\"Dummy\"\n\n**The bool appears to always be false (if it even is a bool, as it's represented by a zero)**\n--------\np1 doesn't seem to make a difference, regardless of the state it's in. \n\n\npicture of where on the screen this is displayed? ",
+			"comment": "The messages are localized strings.\nExamples:\n\"No_bus_money\"\n\"Enter_bus\"\n\"Tour_help\"\n\"LETTERS_HELP2\"\n\"Dummy\"\"\n\ncurvedWindow is unused.",
 			"params": [
 				{
 					"type": "const char*",
@@ -31786,7 +31786,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p1"
+					"name": "curvedWindow"
 				}
 			],
 			"return_type": "void",
@@ -38221,7 +38221,7 @@
 		"0x1F464EF988465A81": {
 			"name": "ADD_HOSPITAL_RESTART",
 			"jhash": "0x4F3E3104",
-			"comment": "Returns the index of the newly created hospital spawn point.\n\np3 might be radius?",
+			"comment": "Returns the index of the newly created hospital spawn point.\nwhenToUse: must be 0",
 			"params": [
 				{
 					"type": "float",
@@ -38237,11 +38237,11 @@
 				},
 				{
 					"type": "float",
-					"name": "p3"
+					"name": "heading"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "int",
+					"name": "whenToUse"
 				}
 			],
 			"return_type": "int",
@@ -38267,27 +38267,27 @@
 		"0x452736765B31FC4B": {
 			"name": "ADD_POLICE_RESTART",
 			"jhash": "0xE96C29FE",
-			"comment": "",
+			"comment": "whenToUse: must be 0",
 			"params": [
 				{
 					"type": "float",
-					"name": "p0"
+					"name": "x"
 				},
 				{
 					"type": "float",
-					"name": "p1"
+					"name": "y"
 				},
 				{
 					"type": "float",
-					"name": "p2"
+					"name": "z"
 				},
 				{
 					"type": "float",
-					"name": "p3"
+					"name": "heading"
 				},
 				{
-					"type": "Any",
-					"name": "p4"
+					"type": "int",
+					"name": "whenToUse"
 				}
 			],
 			"return_type": "int",
@@ -39620,7 +39620,7 @@
 		"0x9870ACFB89A90995": {
 			"name": "HAS_BULLET_IMPACTED_IN_AREA",
 			"jhash": "0x902BC7D9",
-			"comment": "p3 - possibly radius?",
+			"comment": "bIsPlayer: checks if the player fired the bullet\nbEntryOnly: only find entry impacts",
 			"params": [
 				{
 					"type": "float",
@@ -39636,15 +39636,15 @@
 				},
 				{
 					"type": "float",
-					"name": "p3"
+					"name": "radius"
 				},
 				{
 					"type": "BOOL",
-					"name": "p4"
+					"name": "bIsPlayer"
 				},
 				{
 					"type": "BOOL",
-					"name": "p5"
+					"name": "bIsEntry"
 				}
 			],
 			"return_type": "BOOL",
@@ -52748,7 +52748,7 @@
 		"0xB4AB419E0D86ACAE": {
 			"name": "NETWORK_SESSION_CHANGE_SLOTS",
 			"jhash": "0x6BB93227",
-			"comment": "num player slots allowed in session, seems to work? 32 max",
+			"comment": "",
 			"params": [
 				{
 					"type": "int",
@@ -57635,7 +57635,7 @@
 		"0xEEE6EACBE8874FBA": {
 			"name": "NETWORK_CLAN_PLAYER_GET_DESC",
 			"jhash": "0x6EE4A282",
-			"comment": "bufferSize is 35 in the scripts.\n\nbufferSize is the elementCount of p0(desc), sizeof(p0) == 280 == p1*8 == 35 * 8, p2(netHandle) is obtained from NETWORK::NETWORK_HANDLE_FROM_PLAYER.  And no, I can't explain why 35 * sizeof(int) == 280 and not 140, but I'll get back to you on that.\n\nthe answer is: because p0 an int64_t* / int64_t[35].  and FYI p2 is an int64_t[13]\n\nhttps://pastebin.com/cSZniHak",
+			"comment": "bufferSize is 35 in the scripts.\n\nbufferSize is the elementCount of p0(desc), sizeof(p0) == 280 == p1*8 == 35 * 8, p2(netHandle) is obtained from NETWORK::NETWORK_HANDLE_FROM_PLAYER.\n\nhttps://pastebin.com/cSZniHak",
 			"params": [
 				{
 					"type": "Any*",
@@ -67945,7 +67945,7 @@
 		"0xE1615EC03B3BB4FD": {
 			"name": "IS_MOUSE_LOOK_INVERTED",
 			"jhash": "",
-			"comment": "Used with IS_LOOK_INVERTED() and negates its affect.\n\n--\n\nNot sure how the person above got that description, but here's an actual example:\n\nif (PAD::IS_USING_KEYBOARD_AND_MOUSE(2)) {\n    if (a_5) {\n        if (PAD::IS_LOOK_INVERTED()) {\n            a_3 *= -1;\n        }\n        if (PAD::IS_MOUSE_LOOK_INVERTED()) {\n            a_3 *= -1;\n        }\n    }\n}",
+			"comment": "",
 			"params": [],
 			"return_type": "BOOL",
 			"build": "323"
@@ -68810,12 +68810,12 @@
 		},
 		"0xC2AB6BFE34E92F8B": {
 			"name": "LOAD_ALL_PATH_NODES",
-			"jhash": "",
-			"comment": "",
+			"jhash": "0xC66E28C3",
+			"comment": "Loads/unloads all path nodes on the map.\nReturns true if all nodes are loaded (effectively ARE_NODES_LOADED_FOR_AREA for the entire map).\n\nNote: this native was removed in build 1180 but returned in build 2802.",
 			"params": [
 				{
 					"type": "BOOL",
-					"name": "set"
+					"name": "bLoadAll"
 				}
 			],
 			"return_type": "BOOL",
@@ -70158,7 +70158,7 @@
 		"0x3317DEDB88C95038": {
 			"name": "IS_PED_DEAD_OR_DYING",
 			"jhash": "0xCBDB7739",
-			"comment": "Seems to consistently return true if the ped is dead.\n\np1 is always passed 1 in the scripts.\n\nI suggest to remove \"OR_DYING\" part, because it does not detect dying phase.\n\nThat's what the devs call it, cry about it.\n\nlol",
+			"comment": "",
 			"params": [
 				{
 					"type": "Ped",
@@ -70166,7 +70166,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p1"
+					"name": "checkMeleeDeathFlags"
 				}
 			],
 			"return_type": "BOOL",
@@ -74451,7 +74451,7 @@
 		"0xA6E7F1CEB523E171": {
 			"name": "GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS",
 			"jhash": "0x4892B882",
-			"comment": "Need to check behavior when drawableId = -1\n\n- Doofy.Ass\nWhy this function doesn't work and return nill value?\nGET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS(PLAYER.PLAYER_PED_ID(), 0, 5)\n\ntick: scripts/addins/menu_execute.lua:51: attempt to call field 'GET_NUMBER_OF_PED_PROP_TEXTURE_VARIATIONS' (a nil value)\n\n\nList of component/props ID\ngtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html",
+			"comment": "List of component/props ID\ngtaxscripting.blogspot.com/2016/04/gta-v-peds-component-and-props.html",
 			"params": [
 				{
 					"type": "Ped",
@@ -74658,7 +74658,7 @@
 		"0x9414E18B9434C2FE": {
 			"name": "SET_PED_HEAD_BLEND_DATA",
 			"jhash": "0x60746B88",
-			"comment": "The \"shape\" parameters control the shape of the ped's face. The \"skin\" parameters control the skin tone. ShapeMix and skinMix control how much the first and second IDs contribute,(typically mother and father.) ThirdMix overrides the others in favor of the third IDs. IsParent is set for \"children\" of the player character's grandparents during old-gen character creation. It has unknown effect otherwise.\n\nThe IDs start at zero and go Male Non-DLC, Female Non-DLC, Male DLC, and Female DLC.\n\n!!!Can someone add working example for this???\n\ntry this:\n       headBlendData headData;\n       GET_PED_HEAD_BLEND_DATA(PLAYER_PED_ID(), &headData);\n\n       SET_PED_HEAD_BLEND_DATA(PLAYER_PED_ID(), headData.shapeFirst, headData.shapeSecond, headData.shapeThird, headData.skinFirst, headData.skinSecond\n          , headData.skinThird, headData.shapeMix, headData.skinMix, headData.skinThird, 0);\n\n\nFor more info please refer to this topic. \ngtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained",
+			"comment": "The \"shape\" parameters control the shape of the ped's face. The \"skin\" parameters control the skin tone. ShapeMix and skinMix control how much the first and second IDs contribute,(typically mother and father.) ThirdMix overrides the others in favor of the third IDs. IsParent is set for \"children\" of the player character's grandparents during old-gen character creation. It has unknown effect otherwise.\n\nThe IDs start at zero and go Male Non-DLC, Female Non-DLC, Male DLC, and Female DLC.\n       headBlendData headData;\n       GET_PED_HEAD_BLEND_DATA(PLAYER_PED_ID(), &headData);\n\n       SET_PED_HEAD_BLEND_DATA(PLAYER_PED_ID(), headData.shapeFirst, headData.shapeSecond, headData.shapeThird, headData.skinFirst, headData.skinSecond\n          , headData.skinThird, headData.shapeMix, headData.skinMix, headData.skinThird, 0);\n\n\nFor more info please refer to this topic. \ngtaforums.com/topic/858970-all-gtao-face-ids-pedset-ped-head-blend-data-explained",
 			"params": [
 				{
 					"type": "Ped",
@@ -76832,7 +76832,7 @@
 		"0x56E3B78C5408D9F4": {
 			"name": "CLEAR_PED_BLOOD_DAMAGE_BY_ZONE",
 			"jhash": "0xF210BE69",
-			"comment": "Somehow related to changing ped's clothes.",
+			"comment": "",
 			"params": [
 				{
 					"type": "Ped",
@@ -83826,7 +83826,7 @@
 		"0xCA7DC8329F0A1E9E": {
 			"name": "SET_AIR_DRAG_MULTIPLIER_FOR_PLAYERS_VEHICLE",
 			"jhash": "0xF20F72E5",
-			"comment": "This can be between 1.0f - 14.9f \n\nYou can change the max in IDA from 15.0. I say 15.0 as the function blrs if what you input is greater than or equal to 15.0 hence why it's 14.9 max default.\n\n",
+			"comment": "This can be between 1.0f - 50.0f",
 			"params": [
 				{
 					"type": "Player",
@@ -83843,7 +83843,7 @@
 		"0xA91C6F0FF7D16A13": {
 			"name": "SET_SWIM_MULTIPLIER_FOR_PLAYER",
 			"jhash": "0xB986FF47",
-			"comment": "Swim speed multiplier.\nMultiplier goes up to 1.49\n\nJust call it one time, it is not required to be called once every tick. - Note copied from below native.\n\nNote: At least the IDA method if you change the max float multiplier from 1.5 it will change it for both this and RUN_SPRINT below. I say 1.5 as the function blrs if what you input is greater than or equal to 1.5 hence why it's 1.49 max default.",
+			"comment": "Swim speed multiplier.\nMultiplier goes up to 1.49\n\nJust call it one time, it is not required to be called once every tick. - Note copied from below native.",
 			"params": [
 				{
 					"type": "Player",
@@ -83860,7 +83860,7 @@
 		"0x6DB47AA77FD94E09": {
 			"name": "SET_RUN_SPRINT_MULTIPLIER_FOR_PLAYER",
 			"jhash": "0x825423C2",
-			"comment": "Multiplier goes up to 1.49 any value above will be completely overruled by the game and the multiplier will not take effect, this can be edited in memory however.\n\nJust call it one time, it is not required to be called once every tick.\n\nNote: At least the IDA method if you change the max float multiplier from 1.5 it will change it for both this and SWIM above. I say 1.5 as the function blrs if what you input is greater than or equal to 1.5 hence why it's 1.49 max default.",
+			"comment": "Multiplier goes up to 1.49 any value above will be completely overruled by the game and the multiplier will not take effect.\n\nJust call it one time, it is not required to be called once every tick.",
 			"params": [
 				{
 					"type": "Player",
@@ -98369,7 +98369,7 @@
 		"0x8FBB6758B3B3E9EC": {
 			"name": "TASK_PLAY_PHONE_GESTURE_ANIMATION",
 			"jhash": "0x1582162C",
-			"comment": "Example from the scripts:\nTASK::TASK_PLAY_PHONE_GESTURE_ANIMATION(PLAYER::PLAYER_PED_ID(), v_3, v_2, v_4, 0.25, 0.25, 0, 0);\n\n=========================================================\n^^ No offense, but Idk how that would really help anyone.\n\nAs for the animDict & animation, they're both store in a global in all 5 scripts. So if anyone would be so kind as to read that global and comment what strings they use. Thanks.\n\nKnown boneMaskTypes'\n\"BONEMASK_HEADONLY\"\n\"BONEMASK_HEAD_NECK_AND_ARMS\"\n\"BONEMASK_HEAD_NECK_AND_L_ARM\"\n\"BONEMASK_HEAD_NECK_AND_R_ARM\"\n\np4 known args - 0.0f, 0.5f, 0.25f\np5 known args - 0.0f, 0.25f\np6 known args - 1 if a global if check is passed.\np7 known args - 1 if a global if check is passed.\n\nThe values found above, I found within the 5 scripts this is ever called in. (fmmc_launcher, fm_deathmatch_controller, fm_impromptu_dm_controller, fm_mission_controller, and freemode).\n=========================================================\n\nFull list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json",
+			"comment": "Known boneMaskTypes\n\"BONEMASK_HEADONLY\"\n\"BONEMASK_HEAD_NECK_AND_ARMS\"\n\"BONEMASK_HEAD_NECK_AND_L_ARM\"\n\"BONEMASK_HEAD_NECK_AND_R_ARM\"\n\np4 known args - 0.0f, 0.5f, 0.25f\np5 known args - 0.0f, 0.25f\np6 known args - 1 if a global if check is passed.\np7 known args - 1 if a global if check is passed.\n\nThe values found above, I found within the 5 scripts this is ever called in. (fmmc_launcher, fm_deathmatch_controller, fm_impromptu_dm_controller, fm_mission_controller, and freemode).\n=========================================================\n\nFull list of animation dictionaries and anims by DurtyFree: https://github.com/DurtyFree/gta-v-data-dumps/blob/master/animDictsCompact.json",
 			"params": [
 				{
 					"type": "Ped",
@@ -100165,7 +100165,7 @@
 		"0xBD2A8EC3AF4DE7DB": {
 			"name": "TASK_USE_MOBILE_PHONE",
 			"jhash": "0x225A38C8",
-			"comment": "Actually has 3 params, not 2.\n\np0: Ped\np1: int (or bool?)\np2: int",
+			"comment": "",
 			"params": [
 				{
 					"type": "Ped",
@@ -106697,7 +106697,7 @@
 		"0xFC40CBF7B90CA77C": {
 			"name": "SET_CAR_BOOT_OPEN",
 			"jhash": "",
-			"comment": "Initially used in Max Payne 3, that's why we know the name.",
+			"comment": "",
 			"params": [
 				{
 					"type": "Vehicle",
@@ -112936,7 +112936,7 @@
 		"0xF3CC740D36221548": {
 			"name": "GET_VEHICLE_COLOR",
 			"jhash": "0x03BC8F1B",
-			"comment": "What's this for? Primary and Secondary RGB have their own natives and this one doesn't seem specific.",
+			"comment": "",
 			"params": [
 				{
 					"type": "Vehicle",
@@ -115699,7 +115699,7 @@
 		"0xB8EF61207C2393A9": {
 			"name": "GET_VEHICLE_HEALTH_PERCENTAGE",
 			"jhash": "0x196BA503",
-			"comment": "0 min 100 max\nstarts at 100\nSeams to have health zones\nFront of vehicle when damaged goes from 100-50 and stops at 50.\nRear can be damaged from 100-0\nOnly tested with two cars.\n\nany idea how this differs from the first one?\n\n--\nMay return the vehicle health on a scale of 0.0 - 100.0 (needs to be confirmed)\n\nexample:\n\nv_F = ENTITY::GET_ENTITY_MODEL(v_3);\nif (((v_F == ${tanker}) || (v_F == ${armytanker})) || (v_F == ${tanker2})) {\n    if (VEHICLE::GET_VEHICLE_HEALTH_PERCENTAGE(v_3) <= 1.0) {\n        NETWORK::NETWORK_EXPLODE_VEHICLE(v_3, 1, 1, -1);\n    }\n}",
+			"comment": "0 min 100 max\nstarts at 100\nSeams to have health zones\nFront of vehicle when damaged goes from 100-50 and stops at 50.\nRear can be damaged from 100-0\nOnly tested with two cars.\n\n--\nMay return the vehicle health on a scale of 0.0 - 100.0 (needs to be confirmed)\n\nexample:\n\nv_F = ENTITY::GET_ENTITY_MODEL(v_3);\nif (((v_F == ${tanker}) || (v_F == ${armytanker})) || (v_F == ${tanker2})) {\n    if (VEHICLE::GET_VEHICLE_HEALTH_PERCENTAGE(v_3) <= 1.0) {\n        NETWORK::NETWORK_EXPLODE_VEHICLE(v_3, 1, 1, -1);\n    }\n}",
 			"params": [
 				{
 					"type": "Vehicle",
@@ -118711,7 +118711,7 @@
 		"0xF46CDC33180FDA94": {
 			"name": "GET_WEAPONTYPE_MODEL",
 			"jhash": "0x44E1C269",
-			"comment": "Returns the model of any weapon.\n\nCan also take an ammo hash?\nsub_6663a(&l_115B, WEAPON::GET_WEAPONTYPE_MODEL(${ammo_rpg}));",
+			"comment": "Returns the model of any weapon.",
 			"params": [
 				{
 					"type": "Hash",
@@ -118807,7 +118807,7 @@
 		"0x3A87E44BB9A01D54": {
 			"name": "GET_CURRENT_PED_WEAPON",
 			"jhash": "0xB0237302",
-			"comment": "The return value seems to indicate returns true if the hash of the weapon object weapon equals the weapon hash.\np2 seems to be 1 most of the time.\n\n\n\n\n\np2 is not implemented\n\ndisassembly said that?\n",
+			"comment": "Returns true if the hash of the equipped weapon object equals the weapon hash.\ndoDeadCheck does nothing in release builds.",
 			"params": [
 				{
 					"type": "Ped",
@@ -118819,7 +118819,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p2"
+					"name": "doDeadCheck"
 				}
 			],
 			"return_type": "BOOL",
@@ -118828,15 +118828,15 @@
 		"0x3B390A939AF0B5FC": {
 			"name": "GET_CURRENT_PED_WEAPON_ENTITY_INDEX",
 			"jhash": "0x5D73CD20",
-			"comment": "",
+			"comment": "doDeadCheck does nothing in release builds.",
 			"params": [
 				{
 					"type": "Ped",
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "BOOL",
+					"name": "doDeadCheck"
 				}
 			],
 			"return_type": "Entity",
@@ -118845,7 +118845,7 @@
 		"0x8483E98E8B888AE2": {
 			"name": "GET_BEST_PED_WEAPON",
 			"jhash": "0xB998D444",
-			"comment": "p1 is always 0 in the scripts.",
+			"comment": "bIgnoreAmmoCheck is always false in the scripts.",
 			"params": [
 				{
 					"type": "Ped",
@@ -118853,7 +118853,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p1"
+					"name": "bIgnoreAmmoCheck"
 				}
 			],
 			"return_type": "Hash",
@@ -119776,7 +119776,7 @@
 		"0xFC4BD125DE7611E4": {
 			"name": "EXPLODE_PROJECTILES",
 			"jhash": "0x35A0B955",
-			"comment": "             WEAPON::EXPLODE_PROJECTILES(PLAYER::PLAYER_PED_ID(), func_221(0x00000003), 0x00000001);",
+			"comment": "",
 			"params": [
 				{
 					"type": "Ped",
@@ -119788,7 +119788,7 @@
 				},
 				{
 					"type": "BOOL",
-					"name": "p2"
+					"name": "instant"
 				}
 			],
 			"return_type": "void",
