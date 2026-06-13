@@ -68584,12 +68584,12 @@
 					"name": "nthClosest"
 				},
 				{
-					"type": "Vector3*",
-					"name": "outPosition"
-				},
-				{
 					"type": "float*",
 					"name": "outHeading"
+				},
+				{
+					"type": "int*",
+					"name": "outNumLanes"
 				},
 				{
 					"type": "int",
@@ -68597,11 +68597,11 @@
 				},
 				{
 					"type": "float",
-					"name": "p7"
+					"name": "zMeasureMult"
 				},
 				{
 					"type": "float",
-					"name": "p8"
+					"name": "zTolerance"
 				}
 			],
 			"return_type": "int",
@@ -72839,24 +72839,24 @@
 					"name": "ped"
 				},
 				{
-					"type": "Any",
-					"name": "p1"
+					"type": "float",
+					"name": "x"
 				},
 				{
 					"type": "float",
-					"name": "p2"
+					"name": "y"
+				},
+				{
+					"type": "float",
+					"name": "z"
+				},
+				{
+					"type": "float",
+					"name": "radius"
 				},
 				{
 					"type": "Hash",
 					"name": "hash"
-				},
-				{
-					"type": "Any",
-					"name": "p4"
-				},
-				{
-					"type": "Any",
-					"name": "p5"
 				}
 			],
 			"return_type": "void",
@@ -82199,16 +82199,16 @@
 					"name": "player"
 				},
 				{
-					"type": "Vector3*",
-					"name": "position"
+					"type": "float",
+					"name": "x"
 				},
 				{
-					"type": "BOOL",
-					"name": "p2"
+					"type": "float",
+					"name": "y"
 				},
 				{
-					"type": "BOOL",
-					"name": "p3"
+					"type": "float",
+					"name": "z"
 				}
 			],
 			"return_type": "void",
