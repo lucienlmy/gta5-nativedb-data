@@ -13543,6 +13543,19 @@
 			"return_type": "BOOL",
 			"build": "323"
 		},
+		"0xDA5EF4092EDB83F4": {
+			"name": "_IS_ENTITY_FIXED",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Entity",
+					"name": "entity"
+				}
+			],
+			"return_type": "BOOL",
+			"build": "3889"
+		},
 		"0x18FF00FC7EFF559E": {
 			"name": "APPLY_FORCE_TO_ENTITY_CENTER_OF_MASS",
 			"jhash": "0x28924E98",
@@ -15258,6 +15271,35 @@
 			"return_type": "void",
 			"build": "323"
 		},
+		"0xC12A19AC871A59C1": {
+			"name": "SET_ENTITY_DRAWABLE_LOD_THRESHOLDS",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Entity",
+					"name": "entity"
+				},
+				{
+					"type": "int",
+					"name": "highLod"
+				},
+				{
+					"type": "int",
+					"name": "medLod"
+				},
+				{
+					"type": "int",
+					"name": "lowLod"
+				},
+				{
+					"type": "int",
+					"name": "vlowLod"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
 		"0x5927F96A78577363": {
 			"name": "SET_ENTITY_LOD_DIST",
 			"jhash": "0xD7ACC7AD",
@@ -16005,6 +16047,19 @@
 			"old_names": [
 				"_GET_ENTITY_ATTACHED_TO_WITH_HASH"
 			]
+		},
+		"0xD35ECEBF6FB2C261": {
+			"name": "_GET_CHILD_ATTACHMENT",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Entity",
+					"name": "entity"
+				}
+			],
+			"return_type": "Entity",
+			"build": "3889"
 		},
 		"0xD7B80E7C3BEFC396": {
 			"name": "SET_PICK_UP_BY_CARGOBOB_DISABLED",
@@ -18486,6 +18541,22 @@
 			"return_type": "void",
 			"build": "877"
 		},
+		"0x976D155439608592": {
+			"name": "_SET_BLEND_STATE_NORMAL",
+			"jhash": "",
+			"comment": "Issues a ScriptIM command that sets the blend state to BS_Normal",
+			"params": [],
+			"return_type": "void",
+			"build": "3889"
+		},
+		"0x01677A72A8BDCD1A": {
+			"name": "_SET_BLEND_STATE_ALPHA_ADDITIVE",
+			"jhash": "",
+			"comment": "Issues a ScriptIM command that sets the blend state to BS_AlphaAdd",
+			"params": [],
+			"return_type": "void",
+			"build": "3889"
+		},
 		"0x1DD2139A9A20DCE8": {
 			"name": "BEGIN_TAKE_MISSION_CREATOR_PHOTO",
 			"jhash": "0xBA9AD458",
@@ -19048,6 +19119,67 @@
 				"_DRAW_SPOT_LIGHT_WITH_SHADOW"
 			]
 		},
+		"0x330F4FA20FB57738": {
+			"name": "_DRAW_CAPSULE_LIGHT",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "posX"
+				},
+				{
+					"type": "float",
+					"name": "posY"
+				},
+				{
+					"type": "float",
+					"name": "posZ"
+				},
+				{
+					"type": "float",
+					"name": "dirX"
+				},
+				{
+					"type": "float",
+					"name": "dirY"
+				},
+				{
+					"type": "float",
+					"name": "dirZ"
+				},
+				{
+					"type": "int",
+					"name": "colorR"
+				},
+				{
+					"type": "int",
+					"name": "colorG"
+				},
+				{
+					"type": "int",
+					"name": "colorB"
+				},
+				{
+					"type": "float",
+					"name": "falloff"
+				},
+				{
+					"type": "float",
+					"name": "intensity"
+				},
+				{
+					"type": "float",
+					"name": "capsuleExtent"
+				},
+				{
+					"type": "float",
+					"name": "exponent"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
 		"0xC9B18B4619F48F7B": {
 			"name": "FADE_UP_PED_LIGHT",
 			"jhash": "0x93628786",
@@ -19076,6 +19208,19 @@
 			"old_names": [
 				"_ENTITY_DESCRIPTION_TEXT"
 			]
+		},
+		"0x988C5FE3B815C998": {
+			"name": "_UPDATE_LIGHTS_LOCATION_FROM_ENTITY",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Entity",
+					"name": "entity"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
 		},
 		"0x9641588DAB93B4B5": {
 			"name": "SET_LIGHT_OVERRIDE_MAX_INTENSITY_SCALE",
@@ -19362,6 +19507,60 @@
 			"old_names": [
 				"_DRAW_SPHERE"
 			]
+		},
+		"0xE59B0A106CC15FC2": {
+			"name": "_DRAW_MARKER_GLOW",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "float",
+					"name": "x"
+				},
+				{
+					"type": "float",
+					"name": "y"
+				},
+				{
+					"type": "float",
+					"name": "z"
+				},
+				{
+					"type": "float",
+					"name": "size"
+				},
+				{
+					"type": "int",
+					"name": "red"
+				},
+				{
+					"type": "int",
+					"name": "green"
+				},
+				{
+					"type": "int",
+					"name": "blue"
+				},
+				{
+					"type": "float",
+					"name": "intensity"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
+		"0xDC60226A3F4D9F42": {
+			"name": "_MAKE_GLOWS_ADDITIVE",
+			"jhash": "",
+			"comment": "If enabled sets the blend state of all GameGlows to BS_AlphaAdd",
+			"params": [
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
 		},
 		"0x0134F0835AB6BFCB": {
 			"name": "CREATE_CHECKPOINT",
@@ -20161,6 +20360,68 @@
 			"old_names": [
 				"_DRAW_SPRITE_UV"
 			]
+		},
+		"0x9F7996F4E32B3026": {
+			"name": "_CALCULATE_LINE_ORIENTATION_FROM_RENDERED_CAMERA",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Vector3*",
+					"name": "result"
+				},
+				{
+					"type": "float",
+					"name": "x1"
+				},
+				{
+					"type": "float",
+					"name": "y1"
+				},
+				{
+					"type": "float",
+					"name": "z1"
+				},
+				{
+					"type": "float",
+					"name": "x2"
+				},
+				{
+					"type": "float",
+					"name": "y2"
+				},
+				{
+					"type": "float",
+					"name": "z2"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
+		"0xA7804512D1FDD22A": {
+			"name": "_CALCULATE_ROTATED_VECTOR",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Vector3*",
+					"name": "direction"
+				},
+				{
+					"type": "float",
+					"name": "roll"
+				},
+				{
+					"type": "float",
+					"name": "pitch"
+				},
+				{
+					"type": "float",
+					"name": "yaw"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
 		},
 		"0x9CD43EEE12BF4DD0": {
 			"name": "ADD_ENTITY_ICON",
@@ -29363,6 +29624,14 @@
 				"_SET_CURRENT_CHARACTER_HUD_COLOR"
 			]
 		},
+		"0xD6FAD05D855AF80F": {
+			"name": "GET_RENDERED_TEXT_PADDING_SIZE",
+			"jhash": "",
+			"comment": "",
+			"params": [],
+			"return_type": "float",
+			"build": "3889"
+		},
 		"0xDB88A37483346780": {
 			"name": "GET_RENDERED_CHARACTER_HEIGHT",
 			"jhash": "0x3330175B",
@@ -32769,6 +33038,36 @@
 			"params": [],
 			"return_type": "BOOL",
 			"build": "323"
+		},
+		"0x764EED2568508F13": {
+			"name": "_REPORT_NOMINATED_JOB",
+			"jhash": "",
+			"comment": "p1 is unused",
+			"params": [
+				{
+					"type": "const char*",
+					"name": "jobNominated"
+				},
+				{
+					"type": "Any*",
+					"name": "p1"
+				}
+			],
+			"return_type": "int",
+			"build": "3889"
+		},
+		"0xA3C8062CAB30E8A9": {
+			"name": "_GET_NOMINATED_JOB_REPORT_STATUS",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "int",
+					"name": "index"
+				}
+			],
+			"return_type": "int",
+			"build": "3889"
 		},
 		"0x2432784ACA090DA4": {
 			"name": "IS_FLOATING_HELP_TEXT_ON_SCREEN",
@@ -50494,6 +50793,30 @@
 			],
 			"return_type": "BOOL",
 			"build": "323"
+		},
+		"0xDBD91315C80E9483": {
+			"name": "_NETWORK_GET_TOTAL_EVC_BALANCE_IS_GREATER_THAN_100M",
+			"jhash": "",
+			"comment": "",
+			"params": [],
+			"return_type": "BOOL",
+			"build": "3889"
+		},
+		"0xC44398D46FF6ADB9": {
+			"name": "_NETWORK_GET_TOTAL_EVC_BALANCE_IS_GREATER_THAN_500M",
+			"jhash": "",
+			"comment": "",
+			"params": [],
+			"return_type": "BOOL",
+			"build": "3889"
+		},
+		"0xEEB1C310842A81E0": {
+			"name": "_NETWORK_GET_TOTAL_EVC_BALANCE_IS_GREATER_THAN_1B",
+			"jhash": "",
+			"comment": "",
+			"params": [],
+			"return_type": "BOOL",
+			"build": "3889"
 		}
 	},
 	"NETSHOPPING": {
@@ -61287,6 +61610,23 @@
 			"return_type": "void",
 			"build": "323"
 		},
+		"0xE8BA82390622BA13": {
+			"name": "_NETWORK_ALLOW_DEAD_PED_NETWORK_BLENDING",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "int",
+					"name": "netId"
+				},
+				{
+					"type": "BOOL",
+					"name": "allow"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
 		"0xE6717E652B8C8D8A": {
 			"name": "NETWORK_ENABLE_EXTRA_VEHICLE_ORIENTATION_BLEND_CHECKS",
 			"jhash": "",
@@ -62209,6 +62549,31 @@
 			"return_type": "BOOL",
 			"build": "323"
 		},
+		"0xB1556B9C1425B727": {
+			"name": "_UGC_GET_NOMINATED_CONTENT",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "int",
+					"name": "offset"
+				},
+				{
+					"type": "int",
+					"name": "maxCount"
+				},
+				{
+					"type": "const char*",
+					"name": "contentTypeName"
+				},
+				{
+					"type": "Any*",
+					"name": "p3"
+				}
+			],
+			"return_type": "BOOL",
+			"build": "3889"
+		},
 		"0xE9B99B6853181409": {
 			"name": "UGC_CANCEL_QUERY",
 			"jhash": "0x021D5A94",
@@ -62853,6 +63218,40 @@
 			],
 			"return_type": "BOOL",
 			"build": "323"
+		},
+		"0xEA92F1225A53BE3F": {
+			"name": "_UGC_SET_NOMINATED_JOB",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "const char*",
+					"name": "contentId"
+				},
+				{
+					"type": "BOOL",
+					"name": "nominated"
+				},
+				{
+					"type": "const char*",
+					"name": "contentTypeName"
+				}
+			],
+			"return_type": "BOOL",
+			"build": "3889"
+		},
+		"0x24B3A7EB827EEDCF": {
+			"name": "_UGC_CLEAR_NOMINATED_JOB",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "const char*",
+					"name": "contentTypeName"
+				}
+			],
+			"return_type": "BOOL",
+			"build": "3889"
 		},
 		"0xD05D1A6C74DA3498": {
 			"name": "UGC_SET_DELETED",
@@ -73233,6 +73632,35 @@
 			"return_type": "void",
 			"build": "323"
 		},
+		"0x6D1FCD0950EFA3DD": {
+			"name": "_GENERATE_PED_DAMAGE_EVENT",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Ped",
+					"name": "ped"
+				},
+				{
+					"type": "float",
+					"name": "x"
+				},
+				{
+					"type": "float",
+					"name": "y"
+				},
+				{
+					"type": "float",
+					"name": "z"
+				},
+				{
+					"type": "Hash",
+					"name": "weaponType"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
 		"0x36B77BB84687C318": {
 			"name": "GET_TIME_PED_DAMAGED_BY_WEAPON",
 			"jhash": "0x0170C6E1",
@@ -78202,6 +78630,23 @@
 			],
 			"return_type": "void",
 			"build": "323"
+		},
+		"0x5CBD1684E56BF99D": {
+			"name": "_BLOCK_PED_FROM_WRITHING_WHEN_INJURED",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Ped",
+					"name": "ped"
+				},
+				{
+					"type": "BOOL",
+					"name": "toggle"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
 		},
 		"0x7FB17BA2E7DECA5B": {
 			"name": "SET_PED_GENERATES_DEAD_BODY_EVENTS",
@@ -83999,6 +84444,23 @@
 			"return_type": "void",
 			"build": "323"
 		},
+		"0xE6200F3AF46AC0B5": {
+			"name": "SET_PLAYER_STEALTH_SPEED",
+			"jhash": "",
+			"comment": "stealthSpeed must be between 80 and 120",
+			"params": [
+				{
+					"type": "Player",
+					"name": "player"
+				},
+				{
+					"type": "int",
+					"name": "stealthSpeed"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
 		"0x77DFCCF5948B8C71": {
 			"name": "SET_PLAYER_MAX_ARMOUR",
 			"jhash": "0xC6C3C53B",
@@ -85078,6 +85540,23 @@
 			],
 			"return_type": "void",
 			"build": "323"
+		},
+		"0xC1069B5E5B6EA13E": {
+			"name": "SET_PLAYER_RESET_FLAG_PREFER_REAR_SEATS",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Player",
+					"name": "player"
+				},
+				{
+					"type": "Vehicle",
+					"name": "vehicle"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
 		},
 		"0x11D5F725F0E780E0": {
 			"name": "SET_PLAYER_PHONE_PALETTE_IDX",
@@ -94818,6 +95297,45 @@
 			],
 			"return_type": "void",
 			"build": "3717"
+		},
+		"0x8897A71C988F7936": {
+			"name": "_PLAYSTATS_HEIST5_FINALE",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Any*",
+					"name": "data"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
+		"0x3B144C0026DCBA41": {
+			"name": "_PLAYSTATS_HEIST5_PREP",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Any*",
+					"name": "data"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
+		},
+		"0xBE656648E63C73D7": {
+			"name": "_PLAYSTATS_HEIST5_HACK",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Any*",
+					"name": "data"
+				}
+			],
+			"return_type": "void",
+			"build": "3889"
 		}
 	},
 	"STREAMING": {
@@ -96481,19 +96999,6 @@
 			"old_names": [
 				"_GET_USED_CREATOR_MODEL_MEMORY_PERCENTAGE"
 			]
-		},
-		"0x0F7082C60FB479EF": {
-			"name": "_GET_MODEL_ADDITIONAL_COST",
-			"jhash": "",
-			"comment": "",
-			"params": [
-				{
-					"type": "Hash",
-					"name": "modelHash"
-				}
-			],
-			"return_type": "float",
-			"build": "3717"
 		},
 		"0x4A91423C04BAADA1": {
 			"name": "_GET_TOTAL_MODEL_COST",
@@ -120045,6 +120550,19 @@
 			],
 			"return_type": "void",
 			"build": "323"
+		},
+		"0xDB7CCCD153740D8E": {
+			"name": "HAS_PED_GOT_WEAPON_MANAGER",
+			"jhash": "",
+			"comment": "",
+			"params": [
+				{
+					"type": "Ped",
+					"name": "ped"
+				}
+			],
+			"return_type": "BOOL",
+			"build": "3889"
 		},
 		"0x9541D3CF0D398F36": {
 			"name": "CREATE_WEAPON_OBJECT",
